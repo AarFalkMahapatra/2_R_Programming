@@ -1,0 +1,43 @@
+<- assignment operator, assigns a the value on the right of the operator to the symbol or variable on the left
+
+# comment symbol - all text after the hash symbol is ignored in R execution
+
+Typing an objects name plus enter auto-prints the objects value
+
+R labels the first element of each line in square brackets at the beginning of the line with the count [1]
+==================================================
+
+Objects - all the things that can be manipulated in R
+
+Vector - basic type, must be of the same class
+
+List - exception, a vector object that can have more than 1 class
+
+vector function  - vector() - takes 2 arguments - class, and length - to create an empty vector
+
+Numbers - R thanks of all numbers as numeric objects (double precision real numbers) - if you want an integer you need to specifiy with a capital L
+
+Inf - Infinity, special value that can be used in calculations - 1/0 = Inf
+
+NaN - not defined number (Not a number) - can be through of as a missing value
+
+Attributes - R values you can have attributes, class, name, length, user defined attributes or meta data
+
+attributes() - function to set the attributes
+====================================================
+
+c() - basically the concatenate function to create vecots of objects
+
+TRUE, FALSE or T,F 
+
+mixing obect types will result in R using coercion to convert into the least common denominator class - Y <- c("a", TRUE) becomes a character vector not a logical
+
+Coercion can be forced using the as operator which will force the vector into the specified class " t<-"12" as.numeric(t)"
+
+Explicit conversion does not always work, if the coercion is non-sensical, then the NAS value will result
+
+Lists - like a vector, but every element can be a different class
+
+list() - list function to create a list - prints out differently
+=============================================================
+
