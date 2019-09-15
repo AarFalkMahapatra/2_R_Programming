@@ -41,3 +41,26 @@ Lists - like a vector, but every element can be a different class
 list() - list function to create a list - prints out differently
 =============================================================
 
+Marices are special vectors in R, has a dimension attribute which is itself an integer vector of lenght 2 (number of rows and number of columns)
+
+matrix(nrow=_, ncol=_) - matrix function specifying the number of rows and number of columns
+
+matrices are constructed column wise, you start filling column 1 up to max number of rows then col 2 is built, etc...
+
+dim() - used to assign the dimension attribute like the dimension for a matrix
+
+binding columns and rows 
+cbind - columns
+rbind - rows
+================================================================
+
+Factor - vector to represent categorical data, can be ordered (ranked) or not ordered - integer value where each integer has a label - treated specially by modeling packages, factors are self-describing (coding are built in)
+
+factor() - factor funtion to created factor function
+
+Levels argument sets the order
+
+baseline level - first level in the factor, created using alphabetical order by default, other methods must be explicitly defined using the levels argument
+================================================================
+
+
