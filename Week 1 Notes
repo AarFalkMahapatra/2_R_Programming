@@ -63,4 +63,127 @@ Levels argument sets the order
 baseline level - first level in the factor, created using alphabetical order by default, other methods must be explicitly defined using the levels argument
 ================================================================
 
+Missing values are denoted by na or NaN
+
+NaN - undefined mathimatical objects, NA everything else
+
+na can also have a class value
+
+is.na - tests if an element is missing
+is.nan - tests if element is NaN
+================================================================
+
+Data Frames - key data type used to store tabular data
+
+Data frames are special types of lists that all have the same length (the columns of a table all have the same length)
+
+Columns can be of different types
+
+Every row of a data frame as a name or ID
+
+called by the read.table() or read.csv or data.frame()
+================================================================
+
+All R objects can have names or a name attribute
+
+names()
+================================================================
+
+read.table and read.csv - loads tabular data
+
+readLines - read text files
+
+source - getting R code files
+
+load - reading saved workspaces
+
+unserialize - reading binary objects
+
+read.table - most common function wit many arguments
+    file - filename
+    header - wether the first line contains headers or not
+    sep - denote the separator for columns
+    colClasses - vector that contains the data types for each column
+    comment.char - denote a comment character
+    skip - number of rows at the begining to skip
+    stringsAsFacotrs - T or F, whether or not you want to set strings as            factors
+    
+    for small and moderate sized data sets you ca use read.table without specifying any of the arguments
+    specifying the arguments will reult in better performance for large data sets
+    
+read.csv is the same as read.table with the exception that the default separator is the comma, space it the default separator for read.table and read.csv always has header set to True
+==============================================================
+
+Read the help page for read.table
+
+Reading large datasets - you want to specify the arguments
+  if there or no comments make the comment.char blank " "
+  set the colClasses will not have to determine type
+  use nrows to enter the number of rows so memory cna be estimated
+  
+  Things to know about your system
+    How much RAM
+    How much memory in use
+    Operating system
+    OS 32 or 64 bit
+    
+  Calculate the memory usage before reading table - you need about twice as much RAM as required by the table
+===============================================================
+
+Textual formats dput and dump - contains extra emta data like the type of the data in each column so that does not have to be read at load time
+
+Output the textual types to files, the meta data types preserve the data
+
+textual types work better with version control - github
+
+textual files are not space efficient, large files that need to be compressed.
+
+dump can output multiple files
+===============================================================
+
+There are other methods to connect to data and files
+functions like:
+      file - opens a file
+      gzfile - opens compressed gz file
+      bzfile - opens compressed bzip2 file
+      url - connects to a webpage
+=================================================================
+
+subsetting - extracting subsets of data
+
+[] - returns onject of the same class as the original, can select more than 1 element
+
+[[]] - used to extract elment from a list or data frame, only a single item and that item may have a differnent class
+
+$ - used to extract elements from a list or data frame that have a name, may or may not be of the same class
+
+for [] you can use position values, logical statments, or another vector
+=================================================================
+
+use [[]] and $ to subset a list for single elements of a list
+
+onl [] will allow you to extract multiple elements from a list
+
+[[]] will allow you to return an element based on a calculated result
+================================================================
+
+matrices can be subsetted using the address x[2,4]
+does not always return a matrix, returns vectors be default unless you set the drop argument
+================================================================
+
+$ subset will work on a partial name
+
+double bracket will need to have exact = false set to return based on partial name
+
+=================================================================
+
+Removing missing values use is.na or is.nan to creat a logical vector the use the bang operator ! to omit the true items from the original list
+
+complete.cases will omit items with missing values
+=================================================================
+
+vectorized operations - things can happen in parallel when making computations
+you can add vecotrs with simple operators
+
+
 
