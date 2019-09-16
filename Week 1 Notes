@@ -41,7 +41,7 @@ Lists - like a vector, but every element can be a different class
 list() - list function to create a list - prints out differently
 =============================================================
 
-Marices are special vectors in R, has a dimension attribute which is itself an integer vector of lenght 2 (number of rows and number of columns)
+Matrices are special vectors in R, has a dimension attribute which is itself an integer vector of lenght 2 (number of rows and number of columns)
 
 matrix(nrow=_, ncol=_) - matrix function specifying the number of rows and number of columns
 
@@ -99,7 +99,7 @@ load - reading saved workspaces
 
 unserialize - reading binary objects
 
-read.table - most common function wit many arguments
+read.table - most common function with many arguments
     file - filename
     header - wether the first line contains headers or not
     sep - denote the separator for columns
@@ -109,7 +109,7 @@ read.table - most common function wit many arguments
     stringsAsFacotrs - T or F, whether or not you want to set strings as            factors
     
     for small and moderate sized data sets you ca use read.table without specifying any of the arguments
-    specifying the arguments will reult in better performance for large data sets
+    specifying the arguments will result in better performance for large data sets
     
 read.csv is the same as read.table with the exception that the default separator is the comma, space it the default separator for read.table and read.csv always has header set to True
 ==============================================================
@@ -130,7 +130,7 @@ Reading large datasets - you want to specify the arguments
   Calculate the memory usage before reading table - you need about twice as much RAM as required by the table
 ===============================================================
 
-Textual formats dput and dump - contains extra emta data like the type of the data in each column so that does not have to be read at load time
+Textual formats dput and dump - contains extra meta data like the type of the data in each column so that does not have to be read at load time
 
 Output the textual types to files, the meta data types preserve the data
 
